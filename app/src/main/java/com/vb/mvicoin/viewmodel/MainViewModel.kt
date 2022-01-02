@@ -40,7 +40,8 @@ class MainViewModel @Inject constructor(private val repository: MainRepository):
         viewModelScope.launch {
             state.value = MainState.Loading
             state.value = try {
-                MainState.Coins(repository.getCoins()) }
+                MainState.Coins(repository.getCoins())
+            }
             catch (e: Exception) {
                 MainState.Error(e.localizedMessage)
             }
