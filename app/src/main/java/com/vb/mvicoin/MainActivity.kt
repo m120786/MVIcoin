@@ -10,6 +10,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
 import com.vb.mvicoin.ui.theme.MVIcoinTheme
 import com.vb.mvicoin.view.CoinListView
+import com.vb.mvicoin.view.Navigation
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -20,7 +21,7 @@ class MainActivity : ComponentActivity() {
             MVIcoinTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(color = MaterialTheme.colors.background) {
-                    CoinListView()
+                    Navigation()
                 }
             }
         }

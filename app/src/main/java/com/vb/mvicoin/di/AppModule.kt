@@ -1,7 +1,7 @@
 package com.vb.mvicoin.di
 
 import com.vb.mvicoin.api.ApiService
-import com.vb.mvicoin.repository.MainRepository
+import com.vb.mvicoin.repository.Repository
 import com.vb.mvicoin.util.Constants
 import dagger.Module
 import dagger.Provides
@@ -27,8 +27,8 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun provideRepository(api: ApiService): MainRepository {
-        return MainRepository(api)
+    fun provideRepository(api: ApiService): Repository {
+        return Repository(api)
     }
 
 
